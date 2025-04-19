@@ -1,0 +1,27 @@
+2.a)
+
+<!-- Código controlado el día 12/08/2009>
+2.b)
+
+<div id="bloque1">Contenido del bloque1</div>
+2.c)
+
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+2.d)
+
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+2.e)
+
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+
+2.a) Se coloca al principio de documento, utilizado para realizar un control sobre la última inspección del código. Esta etiqueta es un comentario, no posee atributos y su valor es el string que contiene.
+
+2.b) Se coloca regularmente dentro del <body> (Aunque puede estar en muchas partes del documento), utilizado para dividir secciones del código, conteniendo contenido y ordenando la página. La etiqueta es un divisor, su atributo es el id, el cual no es obligatorio. Su valor es Contenido del bloque1.
+
+2.c) Se coloca donde debe ir ubicada una imagen. Esta etiqueta muestra una imagen, sus atributos son: src (obligatorio para mostrar la imagen), alt (texto de accesibilidad), id (no obligatorio), name (para referenciar en código de js), width y height (dimensiones) y longdesc (descripción mas detallada opcional). La etiqueta no tiene cierre.
+
+2.d) Se coloca dentro de etiquetas <head>, utilizado para metadatos del documento. Entre sus atributos están: name (especifica el tipo de tag, obligatorio en este caso), lang (lenguaje, no obligatorio), content (obligatorio, contiene palabras clave (definido por name) para ser encontrado en buscadores) y http-equiv (indica que el contenido expira según la fecha de su content, para recargar la página en el servidor, obligatorio).
+
+2.e) Se coloca regularmente dentro del <body> (Aunque puede estar en muchas partes del documento), utilizado para describir un hyperlink que nos envía a otra URL. Sus atributos son: href (URL a la que nos lleva, obligatorio), type (tipo de contenido, no obligatorio), hreflang (lenguaje del link, no obligatorio), charset (set de caracteres a usar, no obligatorio) y rel (definición semántica que indica que el link provee ayuda, no obligatorio). Su valor es Resumen HTML
