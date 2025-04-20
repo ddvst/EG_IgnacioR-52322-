@@ -19,3 +19,147 @@
 <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> ---> Se mostrará una imagen, que al ser clickeada nos llevara a la URL indicada en href. Al clickear el texto, ocurrirá lo mismo.
 
 <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p> ---> Igual al último ejemplo.
+
+3.c)
+
+<ul> <--- Lista no ordenada.
+<li>xxx</li> <--- Elementos de lista no ordenada.
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+<ol> <--- Lista ordenada.
+<li>xxx</li> <--- Elementos de lista ordenada.
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+<ol> <--- Lista ordenada.
+<li>xxx</li> <--- Elemento de lista ordenada.
+</ol>
+<ol> <--- Lista ordenada.
+<li value="2">yyy</li> <--- Elemento de lista ordenada, el atributo "value" indica que número le pertenece al elemento, los elementos consecuentes tendrán valores siguientes al indicado.
+</ol>
+<ol> <--- Lista ordenada.
+<li
+value="3">zzz</li> <--- Elemento de lista ordenada, el atributo "value" indica que número le pertenece al elemento, los elementos consecuentes tendrán valores
+</ol>
+<blockquote> <--- Utilizado para indicar citas y fuentes de (en este caso) nuestra tabla.
+<p>1. xxx<br /> <--- Párrafo con nuevas líneas añadidas. 
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+
+3.d)
+
+<table border="1" width="300"> <--- Crea una tabla con atributos predefinidos de borde grosor 1px y ancho de 300px 
+<tr> <--- Comienza primera fila
+<th>Columna 1</th> <--- Crea títulos de columna en la primera fila
+<th>Columna 2</th>
+</tr>
+<tr> <--- Comienza segunda fila
+<td>Celda 1</td> <--- Crea contenido de tabla en la segunda fila
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+<table border="1" width="300"> <--- Misma sintáxis que ejemplo anterior
+<tr> <--- Misma sintáxis que el ejemplo anterior
+<td><div align="center"><strong>Columna 1</strong></div></td> <--- Crea título de columna centrado y en negrita en la primer fila
+<td><div align="center"><strong>Columna 2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+3.e)
+
+Segmento 1:
+
+Crea titulo con etiqueta <caption>, la cual crea una caja.
+Crea dos filas con tres columnas y color #dddddd
+
+Segmento 2:
+
+Crea una fila que abarca las tres columnas (colspan="3") y la centra con el div, le da el valor de "Título"
+Crea dos filas con tres columnas y color #dddddd
+
+3.f)
+
+Segmento 1:
+
+Crea una fila que abarca las tres columnas (colspan="3") y la centra con una etiqueta <div>, le da el valor de "Título"
+Crea una columna que ocupa dos filas (rowspan="2") y color #dddddd, luego crea dos columnas más con color #dddddd
+Crea una fila con dos columnas de color #dddddd
+
+Segmento 2:
+
+Crea una fila que abarca las tres columnas (colspan="3") y la centra con una etiqueta <div>, le da el valor de "Título"
+Crea una fila que abarca dos columnas (colspan="2") y color #dddddd, luego crea otra columna de color #dddddd
+Crea una fila con tres columnas y color #dddddd
+
+3.g)
+
+Segmento 1:
+
+Crea una tabla con un ancho de 200 píxeles y borde visible de 1 px.
+Crea una fila con una celda que abarca tres columnas (colspan="3"), centra su contenido con un <div> y le asigna el texto "Título".
+Crea otra fila con una celda que ocupa dos columnas (colspan="2") y dos filas (rowspan="2"), dejándola vacía (&nbsp;), y agrega otra celda vacía al lado.
+Crea una tercera fila donde solo aparece una celda (porque la anterior ocupaba dos filas), le asigna un ancho del 50% y la deja vacía.
+
+Segmento 2:
+
+Crea una tabla de 200 píxeles de ancho con borde de 1 píxel, sin espacio entre celdas (cellspacing="0") y sin relleno interno (cellpadding="0").
+Crea una primera fila donde una celda ocupa dos columnas (colspan="2"), centra el texto "Título" usando un <div>.
+En la segunda fila, crea una celda que ocupa dos filas hacia abajo (rowspan="2") y la deja vacía, junto a otra celda vacía normal.
+En la tercera fila, solo trabaja con una celda (porque la anterior usó rowspan), le pone un ancho del 50% y la deja vacía.
+
+3.h)
+
+Segmento 1:
+
+Crea un formulario llamado "form1" que envía datos por POST a "procesar.php" y se abre en una nueva pestaña (target="_blank").
+Dentro coloca un fieldset (grupo de campos) con el título "LOGIN" (usando <legend>).
+En el primer campo escribe "Usuario:" seguido de un input de texto con ID "usu1", nombre "usu1" y valor predefinido "xxx", luego añade un salto de línea.
+En el segundo campo escribe "Clave:" seguido de un input tipo password con ID "clave1", nombre "clave1" y valor predefinido "xxx".
+Fuera del fieldset pero dentro del formulario, añade un botón de envió (type="submit") con ID "boton1", nombre "boton1" y el texto "Enviar".
+
+Segmento 2:
+
+Crea un formulario llamado "form2" que enviará datos por GET (method="get") sin acción definida (action="") y se abrirá en nueva pestaña (target="_blank").
+Escribe "LOGIN" seguido de un salto de línea.
+Coloca un campo con etiqueta <label> que dice "Usuario:" vinculado a un input de texto (type="text") con ID "usu2" y nombre "usu2", sin valor predefinido, seguido de un salto de línea.
+Añade otro campo con etiqueta <label> que dice "Clave:" vinculado a un input de texto (type="text", no es tipo password) con ID "clave2" y nombre "clave2", también sin valor predefinido, y otro salto de línea.
+Finalmente, inserta un botón de envió (type="submit") con ID "boton2", nombre "boton2" y el texto "Enviar".
+
+Segmento 3:
+
+Crea un formulario llamado "form3" que intenta enviar los datos por correo electrónico (action="mailto:xx@xx.com") usando codificación de texto plano (enctype="text/plain") y método POST, abriéndose en nueva pestaña.
+Dentro coloca un fieldset con título "LOGIN" (usando <legend>).
+En el primer campo escribe "Usuario:" seguido de un input de texto (type="text") con ID "usu3" y nombre "usu3", sin valor predefinido, y un salto de línea.
+En el segundo campo escribe "Clave:" seguido de un input tipo password (type="password") con ID "clave3" y nombre "clave3", que ocultará los caracteres ingresados.
+Fuera del fieldset pero dentro del formulario, añade un botón de reset (type="reset") con ID "boton3", nombre "boton3" y texto "Enviar".
+
+3.i)
+
+Segmento 1:
+
+Crea una etiqueta <label> que envuelve un botón y su texto descriptivo "Botón 1".
+Dentro del label, inserta un botón de tipo genérico (type="button") con nombre "boton1" e ID "boton1".
+Dentro del botón coloca:
+    1. Una imagen (<img>) con fuente "logo.jpg", texto alternativo "Botón con imagen", y dimensiones de 30x20 píxeles (ancho x alto).
+    2. Un salto de línea (<br />) seguido de texto en negrita (<b>) que dice "CLICK AQUÍ".
+
+Segmento 2:
+
+Crea una etiqueta <label> que envuelve el texto "Botón 2" junto a un input tipo botón.
+Dentro del label, inserta un botón (<input type="button">) con:
+    1. Nombre e ID: "boton2" (para identificación).
+    2. Texto visible: "CLICK AQUÍ" (definido en el atributo value).
