@@ -1,0 +1,21 @@
+3.a)
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a> ---> Sobreescribe la URL actual con la indicada en href.
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> ---> Abre una nueva ventana que nos dirige hacia el URL indicado en href.
+
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> ---> Misma funcionalidad que el primer ejemplo, con datos opcionales.
+
+<a href="#">Click aquí para ir a Google</a> ---> Al ser clickeado, nos transporta al inicio de la página
+
+<a href="#arriba">Click aquí para volver arriba</a> ---> Al ser clickeado, nos transporta hacia el elemento con atributo id="#arriba".
+
+<a name="arriba" id="arriba"></a> ---> Al ser clickeado, no ocurre nada.
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> ---> Se mostrará una imagen, con un texto clickeable hyperlink debajo, que nos llevará a la URL indicada en href.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> ---> Se mostrará una imagen, que al ser clickeada nos llevara a la URL indicada en href. Al clickear el texto, no ocurrira nada (está fuera de la etiqueta <a>).
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> ---> Se mostrará una imagen, que al ser clickeada nos llevara a la URL indicada en href. Al clickear el texto, ocurrirá lo mismo.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p> ---> Igual al último ejemplo.
