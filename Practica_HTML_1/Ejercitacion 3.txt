@@ -163,3 +163,39 @@ Crea una etiqueta <label> que envuelve el texto "Botón 2" junto a un input tipo
 Dentro del label, inserta un botón (<input type="button">) con:
     1. Nombre e ID: "boton2" (para identificación).
     2. Texto visible: "CLICK AQUÍ" (definido en el atributo value).
+
+3.j)
+
+Segmento 1:
+
+Crea un párrafo <p> que contiene dos elementos de radio button.
+Cada radio button está envuelto en una etiqueta <label>.
+El primer radio button tiene type="radio", name="opcion", id="X" y value="X". Muestra "X" como texto.
+El segundo radio button tiene type="radio", name="opcion", id="Y" y value="Y". Muestra "Y" como texto.
+Los radio buttons comparten el mismo nombre (name="opcion"), lo que los agrupa para selección mutuamente excluyente.
+Un salto de línea <br /> separa los dos radio buttons.
+
+Segmento 2:
+
+Crea un párrafo <p> con dos botones de radio. Cada uno está dentro de una etiqueta <label>.
+El primer botón tiene type="radio", name="opcion1", id="X" y value="X". Muestra "X" como texto.
+El segundo botón tiene type="radio", name="opcion2", id="Y" y value="Y". Muestra "Y" como texto.
+Un <br /> separa los botones.
+Los atributos name diferentes (opcion1 y opcion2) permiten seleccionar ambos botones al mismo tiempo.
+
+3.k)
+
+Segmento 1:
+
+Crea un elemento <select> con el nombre "lista". Contiene dos grupos de opciones.
+El primer grupo tiene la etiqueta "Caso 1". Incluye las opciones "Mayo" y "Junio".
+El segundo grupo tiene la etiqueta "Caso 2". También incluye las opciones "Mayo" y "Junio".
+Cada <optgroup> agrupa visualmente sus opciones relacionadas.
+
+Segmento 2:
+
+Crea un elemento <select> con nombre "lista[]". El atributo "multiple" permite selección múltiple.
+Contiene dos grupos de opciones. El primer grupo tiene etiqueta "Caso 1" con opciones "Mayo" y "Junio".
+El segundo grupo tiene etiqueta "Caso 2" con opciones idénticas "Mayo" y "Junio".
+Los corchetes en "lista[]" indican que se enviará un array de valores al servidor cuando se seleccionen múltiples opciones.
+Cada <optgroup> organiza visualmente las opciones, pero no afecta la funcionalidad.
