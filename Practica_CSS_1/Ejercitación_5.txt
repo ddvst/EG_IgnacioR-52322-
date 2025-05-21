@@ -1,0 +1,40 @@
+1. 
+h1,h2,h3,h4{
+  color: red;
+}
+
+2.
+div p [href] {
+  color: black;
+}
+
+3.
+#ultimo ul {
+  color: yellow;
+},
+#ultimo ul [href] {
+  color: blue;
+}
+
+4.
+div #importante {
+  color: green;
+}
+h1 #importante{
+  color: red;
+}
+
+5.
+h1 [title]{
+  color: blue;
+}
+
+6.
+ol a{
+  color: blue;
+  text-decoration: none;
+},
+
+ol a:visited{
+  color: violet;
+}
