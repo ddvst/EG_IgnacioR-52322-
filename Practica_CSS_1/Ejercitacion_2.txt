@@ -1,0 +1,24 @@
+p#normal {
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold;
+} -> A los elementos de etiqueta <p> e ID="normal" se le aplicara la fuente arial,helvetica, el tamaño de 11px y la negrita.
+
+*#destacado {
+border-style: solid;
+border-color: blue;
+border-width: 2px;
+} -> A todos los elementos (*) con la ID="destacado" se les aplicara un borde solido, azul y de 2 pixeles.
+
+#distinto {
+background-color: #9EC7EB;
+color: red;
+} -> A todos los elementos con la ID="distinto" se les aplicara el color del fondo #9EC7EB, mientras que texto u otros elementos en primera plana tendrán el color rojo.
+
+<p id="normal">Este es un párrafo</p> -> Fuente arial,helvetica; de tamaño de 11px, en negrita.
+
+<p id="destacado">Este es otro párrafo</p> -> Párrafo con un borde sólido, de dos píxeles y azul.
+
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table> -> Tabla con borde sólido, de dos píxeles y azul.
+
+<p id="distinto">Este es el último párrafo</p> -> Párrafo con fondo de color #9EC7EB y texto con color rojo.
