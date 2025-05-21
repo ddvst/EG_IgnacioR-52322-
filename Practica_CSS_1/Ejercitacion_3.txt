@@ -1,0 +1,36 @@
+p.quitar {
+color: red;
+} -> Todo párrafo (<p>) con la clase "quitar" tendrá su texto de color rojo.
+
+*.desarrollo {
+font-size: 8px;
+} -> Todo elemento con la clase "desarrollo" tendrá su tamaño de fuente igual a 8px.
+
+.importante {
+font-size: 20px;
+} -> Todo texto con la clase "importante" tendrá su tamaño de fuente igual a 20px.
+
+<p class="desarrollo">
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p> -> Se crea párrafo de clase "desarrollo" (osea que el tamaño de su texto será de 8px) y contiene una nueva línea dentro de si (<br />).
+
+<p class="quitar">
+Este párrafo debe ser quitado de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p> -> Se crea párrafo de clase "quitar" (osea que su texto estará de color rojo) y contiene una nueva línea dentro de si (<br />).
+
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p> -> Párrafo sin alteraciones.
+
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p> -> Se crea párrafo de clase "importante" (osea que el tamaño de su texto será de 20px) y contiene una nueva línea dentro de si (<br />).
+
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1> -> Se crea título de clase "quitar" (osea que su texto estará de color rojo) y contiene una nueva línea dentro de si (<br />).
+
+
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p> -> Se crea párrafo de clases "quitar" e "importante", osea que su texto tendrá un tamaño de 20px y un color rojo.
