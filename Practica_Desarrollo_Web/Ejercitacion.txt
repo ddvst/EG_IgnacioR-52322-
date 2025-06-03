@@ -1,0 +1,63 @@
+1- A qué nos referimos al hablar de Arquitectura de la Información y cuáles son los ítems
+principales que constituyen su metodología?
+
+
+2- Cuál es la ventaja de tener identificados y definidos los objetivos del sitio?
+
+
+3- Qué es la audiencia?
+
+
+4- Según qué tipos de características se deben analizar las audiencias?
+
+
+5- Qué son los escenarios de uso?
+
+
+6- Cuáles deberían ser los contenidos indispensables de un sitio web?
+
+
+7- Cuáles son los requerimientos funcionales más frecuentes en un sitio web?
+
+
+8- Al definir la estructura de un sitio, ¿cuáles son los dos aspectos fundamentales que se deben considerar?
+
+
+9- Cuál es la diferencia entre estructura y diseño de un sitio web?
+
+
+10- Cuáles son las características que debe tener el sistema de navegación? Explicar c/u.
+
+
+11- Cuáles son los elementos más importantes de un sistema de navegación?
+
+
+12- Cuáles son las cuatro etapas sucesivas que se deben realizar para definir el Diseño Visual de un sitio web y en qué consiste cada una?
+
+
+13- Cuáles son los sistemas que puede utilizar un Sitio Web para recibir feedback o retroalimentación de parte del usuario?
+
+
+14- En qué consiste la Prueba de verificación de Contenidos?
+
+
+15- En qué consiste la Prueba de Verificaciones de Interfaces?
+
+
+16- Cuáles son los chequeos más importantes que se deben realizar respecto de las funcionalidades y aplicaciones que ofrece el sitio?
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Parte 2
+1- Qué es una interfaz y cuáles son sus elementos fundamentales?
+
+
+2- Qué es un sistema de navegación y cuáles deben ser sus elementos indispensables?
+
+
+3- Qué es Flash y qué problemas puede acarrear su uso?
+
+
+4- Qué es AJAX y qué problemas puede acarrear su uso?
+
