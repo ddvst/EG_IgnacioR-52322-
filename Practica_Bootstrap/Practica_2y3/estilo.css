@@ -1,0 +1,19 @@
+*{
+    padding: 5px;
+}
+
+.morado{
+    background-color: blueviolet;
+}
+.verde{
+    background-color: green;
+}
+.celeste{
+    background-color: aqua;
+}
+.gris{
+    background-color: grey;
+}
+.amarillo{
+    background-color: yellow;
+}
