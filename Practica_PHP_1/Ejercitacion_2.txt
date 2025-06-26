@@ -1,0 +1,102 @@
+a- 
+  1.  <?php
+      $i = 1; <-- $i es igual a 1
+      while ($i <= 10) { <-- Mientras que $i sea menor o igual que 10
+      print $i++; <-- Escribe $i y luego la incrementa por 1
+      }
+      ?>
+
+      1-OUTPUT: 12345678910
+
+  2.  <?php
+      $i = 1; <-- $i es igual a 1
+      while ($i <= 10): <-- Mientras que $i sea menor o igual que 10
+      print $i; <-- Escribe $i
+      $i++; <-- Incrementa a $i por 1
+      endwhile;
+      ?>
+
+      2-OUTPUT: 12345678910
+
+  3.  <?php
+      $i = 0; <-- $i es igual a 0
+      do {
+      print ++$i; <-- Primero incrementa a $i por 1 y luego la escribe
+      } while ($i<10);
+      ?>
+
+      3-OUTPUT: 12345678910
+
+a- RTA: 1-OUTPUT = 2-OUTPUT = 3-OUTPUT, Los fragmentos de código son equivalentes.
+
+b-
+  1.  <?php
+      for ($i = 1; $i <= 10; $i++) { <-- Crea la variable $i y le asigna valor 1, evalua a la variable $i tal que sea menor o igual a 10, si se verifica, entonces aumenta a $i por 1
+      print $i; <-- Escribe el valor de $i en la consola
+      }
+      ?>
+
+      1-OUTPUT: 12345678910
+
+  2.  <?php
+      for ($i = 1; $i <= 10; print $i, $i++) ; <-- Crea la variable $i y le asigna valor 1, evalua a la variable $i tal que sea menor o igual a 10, si se verifica, entonces escribe el valor de $i en la consola y aumenta a $i por 1
+      ?>
+
+      2-OUTPUT: 12345678910
+
+  3.  <?php
+      for ($i = 1; ;$i++) { <-- Crea la variable $i y le asigna valor 1, se considera a la condición como verdadera y por cada loop aumenta a $i por 1
+      if ($i > 10) { <-- Estructura de control: Verifica si $i es mayor a 10
+      break; <-- Finaliza el loop
+      }
+      print $i; <-- Escribe el valor de $i en la consola
+      }
+      ?>
+
+      3-OUTPUT: 12345678910
+
+  4.  <?php
+      $i = 1; <-- Crea la variable $i y le asigna valor 1
+      for (;;) { <-- Comienza loop, se considera a la condición como verdadera
+      if ($i > 10) { <-- Estructura de control: Verifica si $i es mayor a 10
+      break; <-- Finaliza el loop
+      }
+      print $i; <-- Escribe el valor de $i en la consola
+      $i++; <-- Aumenta a $i por 1
+      }
+      ?>
+
+      4-OUTPUT: 12345678910
+
+b- RTA: 1-OUTPUT = 2-OUTPUT = 3-OUTPUT = 4-OUTPUT, Los fragmentos de código son equivalentes.
+
+c-
+  1.  <?php
+      …
+      …
+      if ($i == 0) { <-- Estructura de control: Verifica si $i es igual a 0
+      print "i equals 0"; <-- Escribe en la consola "i equals 0"
+      } elseif ($i == 1) { <-- Estructura de control: Verifica si $i es igual a 1
+      print "i equals 1"; <-- Escribe en la consola "i equals 1"
+      } elseif ($i == 2) { <-- Estructura de control: Verifica si $i es igual a 2
+      print "i equals 2"; <-- Escribe en la consola "i equals 2"
+      }
+      ?>
+
+  2.  <?php
+      …
+      …
+      switch ($i) { <-- Estructura de control de tipo switch evaluada en $i
+      case 0: <-- Si $i == 0
+      print "i equals 0"; <-- Escribe en la consola "i equals 0"
+      break; <-- Fin switch
+      case 1: <-- Si $i == 1
+      print "i equals 1"; <-- Escribe en la consola "i equals 1"
+      break; <-- Fin switch
+      case 2: <-- Si $i == 2
+      print "i equals 2"; <-- Escribe en la consola "i equals 2"
+      break; <-- Fin switch
+      }
+      ?>
+
+c- RTA: 1-OUTPUT = 2-OUTPUT, los fragmentos de codigo son equivalentes.
