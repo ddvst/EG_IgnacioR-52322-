@@ -1,0 +1,46 @@
+a-
+
+  <html>
+    <head><title>Documento 1</title></head>
+    <body>
+      <?php
+      echo "<table width = 90% border = '1' >"; <-- Abre la etiqueta de una tabla nueva con ancho igual al 90% de la pantalla y con un borde de 1 pixel
+      $row = 5; <-- Crea variable $row de valor 5 (filas)
+      $col = 2; <-- Crea variable $col de valor 2 (columnas)
+      for ($r = 1; $r <= $row; $r++) { <-- Crea variable $r de valor inicial 1, verifica si $r es menor o igual a $row, aumenta a $r por 1
+        echo "<tr>"; <-- Abre la etiqueta de fila dentro de la tabla
+        for ($c = 1; $c <= $col;$c++) { <-- Crea variable $c de valor inicial 1, verifica si $c es menor o igual a $col, aumenta a $c por 1
+          echo "<td>&nbsp;</td>\n"; <-- Crea una columna vacia y genera una nueva linea
+        } echo "</tr>\n"; <-- Cierra la etiqueta de fila y genera una nueva linea
+      }
+      echo "</table>\n"; <-- Cierra la etiqueta de tabla
+      ?>
+    </body>
+  </html>
+
+b-
+  
+  <html>
+    <head><title>Documento 2</title></head>
+    <body>
+      <?php
+      if (!isset($_POST['submit'])) { <-- Controla que el form no haya sido enviado
+        ?>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"> <-- Abre la etiqueta de form y como accion envia los datos de la misma al servidor
+        Edad: <input name="age" size="2"> <-- Genera una etiqueta input de variable age
+        <input type="submit" name="submit" value="Ir"> <-- Genera el boton para enviar el form
+        </form> <-- Cierra la etiqueta de form
+        <?php
+      }
+      else { <-- Si el form ya fue enviado (isset($_POST['submit']) == TRUE)
+        $age = $_POST['age']; <-- Crea la variable $age y le asigna el valor que fue enviado en el form
+        if ($age >= 21) { <-- Estructura de control: Verifica si el valor de $age es mayor o igual a 21
+          echo 'Mayor de edad'; <-- Escribe en la consola "Mayor de edad"
+        }
+        else {
+          echo 'Menor de edad'; <-- Escribe en la consola "Menor de edad"
+        }
+      }
+      ?>
+    </body>
+  </html>
