@@ -1,0 +1,23 @@
+<?php
+function doble($i) {
+return $i*2; <-- La funcion devuelve el parámetro recibido (por valor) multiplicado por 2
+} <-- Funcion escrita por el usuario con pasaje de parámetros por valor
+$a = TRUE; <-- declaracion de variable a de tipo boolean
+$b = "xyz"; <-- declaracion de variable a de tipo string
+$c = 'xyz'; <-- declaracion de variable a de tipo string
+$d = 12; <-- declaracion de variable a de tipo integer
+echo gettype($a); <-- funcion gettype($a) -> OUTPUT: boolean
+echo gettype($b); <-- funcion gettype($a) -> OUTPUT: string
+echo gettype($c); <-- funcion gettype($a) -> OUTPUT: string
+echo gettype($d); <-- funcion gettype($a) -> OUTPUT: integer
+if (is_int($d)) { <-- funcion is_int($d) -> OUTPUT: TRUE (Toma la variable y verifica que sea de tipo integer)
+$d += 4; <-- Suma $d = $d + 4; Operación unaria
+} <-- Estructura de control IF
+if (is_string($a)) { <-- funcion is_string($a) -> OUTPUT: FALSE (Toma la variable y verifica que sea de tipo string)
+echo "Cadena: $a"; <-- Escribe en la consola "Cadena: (valor de la variable)"
+}
+$d = $a ? ++$d : $d*3; <-- Operación ternaria: Si $d es igual a $a (operando 1) entonces $d = $d + 1 (operando 2); Sino: $d = $d*3 (operando 3)
+$f = doble($d++); <-- Crea una variable nueva y le asigna el resultado de retorno de la funcion doble con el parámetro $d++ (operacion unaria para sumar 1 a la variable) -> ($d+1 (parámetro))*(2 (funcion "doble")), f de tipo integer y con valor 26 [(12+1)*2]
+$g = $f += 10; <-- Crea una variable nueva y le asigna el valor de la operacion unaria $f += 10$
+echo $a, $b, $c, $d, $f , $g; <-- Escribe en la consola el valor de las variables $a, $b, $c, $d, $f, $g -> TRUE, xyz, xyz, 12, 26, 36
+?>
