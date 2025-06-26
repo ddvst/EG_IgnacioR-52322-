@@ -1,0 +1,9 @@
+<?php
+echo "El $flor $color \n"; <-- $flor y $color No existen, escribe en la consola "El   " y una nueva linea
+include 'datos.php';
+echo " El $flor $color"; <-- $flor y $color fueron incluidos, escribe en la consola " El clavel blanco"
+?>
+
+OUTPUT:
+  El   
+   El clavel blanco
