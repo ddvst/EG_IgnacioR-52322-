@@ -1,0 +1,94 @@
+1-
+  Sí, ambos fragmentos de código son equivalentes (el array asociativo en el primer ejemplo es igual a la declaracion del segundo).
+
+2-
+  a. <?php
+      $matriz = array("x" => "bar", 12 => true);
+      echo $matriz["x"];
+      echo $matriz[12];
+      ?>
+
+  OUTPUT-a: 
+      bar
+      TRUE
+
+  b. <?php
+      $matriz = array("unamatriz" => array(6 => 5, 13 => 9, "a" => 42));
+      echo $matriz["unamatriz"][6];
+      echo $matriz["unamatriz"][13];
+      echo $matriz["unamatriz"]["a"];
+      ?>
+
+  OUTPUT-b: 
+      5
+      9
+      42
+
+  c. <?php
+      $matriz = array(5 => 1, 12 => 2);
+      $matriz[] = 56;
+      $matriz["x"] = 42; unset($matriz[5]); unset($matriz);
+      ?>
+
+  OUTPUT-c: (No hay output, y luego del unset($matriz), tampoco está su contenido en memoria)
+
+3-
+  a. <?php
+      $fun = getdate();
+      echo "Has entrado en esta pagina a las $fun[hours] horas, con $fun[minutes] minutos y $fun[seconds]
+      segundos, del $fun[mday]/$fun[mon]/$fun[year]";
+      ?>
+
+  OUTPUT-a: Has entrado en esta pagina a las (horas) horas, con (minutos) minutos y (segundos) segundos, del (dia)/(mes)/(año)
+
+  b. <?php
+      function sumar($sumando1,$sumando2){
+      $suma=$sumando1+$sumando2;
+      echo $sumando1."+".$sumando2."=".$suma;
+      }
+      sumar(5,6);
+      ?>
+
+  OUTPUT-b: 5+6=11
+
+4-
+
+  function comprobar_nombre_usuario($nombre_usuario) {
+    if (strlen($nombre_usuario) < 3 || strlen($nombre_usuario) > 20) { <-- Comprueba el tamaño del string (mínimo 3, máximo 20 caracteres)
+        echo $nombre_usuario . " no es válido<br>";
+        return false;
+    }
+    $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"; <-- Crea una nueva variable permitidos y define caracteres permitidos
+    for ($i = 0; $i < strlen($nombre_usuario); $i++) { <-- Recorre cada carácter del nombre de usuario
+        if (strpos($permitidos, substr($nombre_usuario, $i, 1)) === false) { <-- Estructura de control: Si el carácter no está en la lista de permitidos
+            echo $nombre_usuario . " no es válido<br>";
+            return false;
+        }
+    }
+    echo $nombre_usuario . " es válido<br>";
+    return true;
+  }
+
+Script de prueba:
+
+  <?php
+  function validarNombre($nombre_usuario) {
+      if (strlen($nombre_usuario) < 3 || strlen($nombre_usuario) > 20) {
+          echo $nombre_usuario . " no es válido<br>";
+          return false;
+      }
+      $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+      for ($i = 0; $i < strlen($nombre_usuario); $i++) {
+          if (strpos($permitidos, substr($nombre_usuario, $i, 1)) === false) {
+              echo $nombre_usuario . " no es válido<br>";
+              return false;
+          }
+      }
+      echo $nombre_usuario . " es válido<br>";
+      return true;
+  }
+  comprobar_nombre_usuario("Juan123"); --> Válido
+  comprobar_nombre_usuario("J"); --> No válido (muy corto)
+  comprobar_nombre_usuario("EsteNombreEsMuyLargoYNoValido"); --> No válido (muy largo)
+  comprobar_nombre_usuario("usuario_ok"); --> Válido
+  ?>
