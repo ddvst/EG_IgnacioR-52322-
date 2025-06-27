@@ -1,0 +1,20 @@
+<? 
+$archivo = "contador.dat"; --> Nombre del archivo que guarda las visitas
+
+if (!file_exists($archivo)) {
+    $crear = fopen($archivo, "w");
+    fwrite($crear, "0");
+    fclose($crear);
+}
+
+$abrir = fopen($archivo, "r"); --> Abre el archivo en modo lectura
+$cont = fread($abrir, filesize($archivo)); --> Lee el contenido (cantidad de visitas)
+fclose($abrir); --> Cierra el archivo
+
+$abrir = fopen($archivo, "w"); --> Abre el archivo en modo de escritura
+$cont = $cont + 1; --> Suma 1 al contador
+$guardar = fwrite($abrir, $cont); --> Guarda el nuevo valor en el archivo
+fclose($abrir); --> Cierra el archivo
+
+echo "<font face='arial' size='3'>Cantidad de visitas: ".$cont."</font>"; --> Muestra el total
+?>
