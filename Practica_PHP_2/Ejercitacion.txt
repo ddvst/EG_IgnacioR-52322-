@@ -20,6 +20,9 @@
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $destinatario = "xx@xx.com";
     $asunto = "Consulta";
+    $nombre = htmlspecialchars($_POST["nombre"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $mensaje = htmlspecialchars($_POST["mensaje"]);
     $cuerpo = "
     <html>
     <head><title>Consulta de Contacto</title></head>
@@ -40,3 +43,51 @@
     <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br><br>
     <input type="submit" value="Enviar Consulta">
   </form>
+
+3- 
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  
+    $emailamigo = $_POST['emailamigo'];  
+    $nombre = htmlspecialchars($_POST['nombre']);  
+    $tu_email = $_POST['email']; 
+    $asunto = "$nombre te recomienda visitar este sitio!";
+    $mensaje = "
+    <html>
+    <head><title>Recomendación de un amigo</title></head>
+    <body>
+    <h2>$nombre te recomienda este sitio</h2>
+    <p>Hola,</p>
+    <p>Tu amigo/a $nombre quiere que visites este sitio web.</p>
+    <p><a href='https://www.pagprueba.com'>Haz clic aquí para verlo</a></p>
+    </body>
+    </html>
+    ";
+  
+     // Encabezados para HTML
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html; charset=UTF-8" . "\r\n";
+    $headers .= "From: $nombre <$email>" . "\r\n";
+ 
+    mail($emailamigo, $asunto, $mensaje, $headers)
+  ?>
+  
+  <h2>Recomendar este sitio a un amigo</h2>
+  <form method="post">
+      <label for="nombre">Tu Nombre:</label><br>
+      <input type="text" name="tu_nombre" required><br><br>
+  
+      <label for="email">Tu Email:</label><br>
+      <input type="email" name="tu_email" required><br><br>
+  
+      <label for="amigo_email">Email de tu amigo:</label><br>
+      <input type="email" name="emailamigo" required><br><br>
+  
+      <input type="submit" value="Enviar Recomendación">
+  </form>
+
+4-
+  ...
+  ...
+  <?php
+    
