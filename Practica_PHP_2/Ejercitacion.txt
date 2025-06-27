@@ -1,0 +1,42 @@
+1-
+  <?php
+  $destinatario = "xx@xx.com";
+  $asunto = "Prueba";
+  $cuerpo = "
+  <html>
+  <head>
+  <title>Correo HTML</title>
+  </head>
+  <body>
+  <p>Este es un <strong>correo de prueba</strong> enviado desde PHP</p>
+  </body>
+  </html>
+  ";
+  mail($destinatario, $asunto, $cuerpo)
+  ?>
+
+2-
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $destinatario = "xx@xx.com";
+    $asunto = "Consulta";
+    $cuerpo = "
+    <html>
+    <head><title>Consulta de Contacto</title></head>
+    <body>
+    <h2>Consulta recibida desde la página de contacto</h2>
+    <p>Email: $email</p>
+    <p>Mensaje:<br>$mensaje</p>
+    </body>
+    </html>
+    ";
+    mail($destinatario, $asunto, $cuerpo)
+  ?>
+
+  <form action="contacto.php" method="post">
+    <label for="email">Ingrese su correo electronico:</label><br>
+    <input type="text" id="email" name="email" required><br><br>
+    <label for="mensaje">Ingrese su consulta:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br><br>
+    <input type="submit" value="Enviar Consulta">
+  </form>
