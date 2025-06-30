@@ -87,7 +87,14 @@
   </form>
 
 4-
-  ...
-  ...
   <?php
+    session_start();
+    if (!isset($_SESSION['contador'])) {
+        $_SESSION['contador'] = 1;
+    } else {
+        $_SESSION['contador']++;
+    }
+    
+    echo "<h2>Visitaste " . $_SESSION['contador'] . " páginas durante esta sesión!!</h2>";
+    ?>
     
