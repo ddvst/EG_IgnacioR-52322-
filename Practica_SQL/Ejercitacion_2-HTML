@@ -1,0 +1,10 @@
+<h1>Gestión de Ciudades</h1>
+<ul>
+    <li><a href="alta.php">Agregar Ciudad</a></li>
+    <li><a href="baja.php">Eliminar Ciudad</a></li>
+    <li><a href="modificar.php">Modificar Ciudad</a></li>
+    <li><a href="listado.php">Listar Ciudades</a></li>
+    <li><a href="listado_paginado.php">Listar Ciudades (Paginado)</a></li>
+</ul> 
+
+<!-- Opciones para poder recorrer y modificar la BdD>
