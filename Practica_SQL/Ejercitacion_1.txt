@@ -1,0 +1,25 @@
+1.
+  a. mysqli_connect(mysql_connect)
+  b. $hostname, $nombreusuario, $contraseña
+  c. mysqli_select_db(mysql_select_db)
+  d. $nombreConexion, $nombreBaseDatos
+  e. Realizar una consulta a la base de datos
+  f. $nombreConexion, $query
+  g. or die() es una funcion que termina con la ejecución del script. Alias de exit(). Toma como parámetro un $mensaje
+  h. Devuelve el codigo de error (si existe).
+
+  <?php
+  while ($fila = mysqli_fetch_array($vResultado)) { <-- Mientras que $fila pertenezca a el array...
+    ?>
+    <tr> <-- Etiqueta de fila para una tabla
+      <td><?php echo ($fila[0]); ?></td> <-- Elemento de tabla con valor del elemento en la posicion 1 del array
+      <td><?php echo ($fila[1]); ?></td> <-- Elemento de tabla con valor del elemento en la posicion 2 del array
+      <td><?php echo ($fila[2']); ?></td> <-- Comilla sin cerrar? Elemento de tabla con valor del elemento en la posicion 3 del array
+    </tr>
+    <tr> <-- Etiqueta de fila sin cerrar?
+      <td colspan="5"> <-- Elemento de tabla que ocupa 5 columnas
+    <?php
+  }
+  mysqli_free_result($vResultado); <-- Libera la memoria que usaba el resultado
+  mysqli_close($link); <-- Cierra el vínculo con la base de datos
+  ?>
