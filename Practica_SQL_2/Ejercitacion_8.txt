@@ -1,0 +1,38 @@
+SQL:
+
+CREATE DATABASE prueba;
+USE prueba;
+
+CREATE TABLE buscador (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    canciones VARCHAR(255)
+);
+
+PHP:
+
+<form method="post">
+    Buscar canciones: <input type="text" name="buscar" required>
+    <input type="submit" value="Buscar">
+</form>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $buscar = $_POST['buscar'];
+    $link = mysqli_connect("localhost", "root", "", "prueba");
+
+    $sql = "SELECT * FROM buscador WHERE canciones LIKE '%$buscar%'";
+    $result = mysqli_query($link, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo "<ul>";
+        while ($fila = mysqli_fetch_assoc($result)) {
+            echo "<li>" . htmlspecialchars($fila['canciones']) . "</li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "No se encontraron canciones.";
+    }
+
+    mysqli_close($link);
+}
+?>
