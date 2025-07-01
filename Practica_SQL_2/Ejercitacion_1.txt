@@ -1,0 +1,45 @@
+<?php
+session_start();
+
+if (isset($_POST['estilo'])) {
+    $_SESSION['estilo'] = $_POST['estilo'];
+}
+
+$estilo = isset($_SESSION['estilo']) ? $_SESSION['estilo'] : 'estilo1.css';
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configuracion de Estilo</title>
+    <link rel="stylesheet" href="<?php echo $estilo; ?>">
+</head>
+<body>
+<h2>Seleccione un estilo para la pagina:</h2>
+<form method="post">
+    <select name="estilo">
+        <option value="estilo1.css" <?php if($estilo == 'estilo1.css') echo 'selected'; ?>>Estilo 1</option>
+        <option value="estilo2.css" <?php if($estilo == 'estilo2.css') echo 'selected'; ?>>Estilo 2</option>
+    </select>
+    <input type="submit" value="Aplicar estilo">
+</form>
+
+<p>contenido de ejemplo.</p>
+</body>
+</html>
+
+CSS: 
+
+estilo1.css
+
+  body {
+      background-color: lightblue;
+      color: darkblue;
+  }
+
+estilo2.css
+
+  body {
+      background-color: lightgray;
+      color: darkred;
+  }
