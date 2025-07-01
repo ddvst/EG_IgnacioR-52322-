@@ -1,0 +1,52 @@
+SQL:
+
+CREATE DATABASE base2;
+USE base2;
+
+CREATE TABLE alumnos (
+    codigo INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    codigocurso INT,
+    mail VARCHAR(100)
+);
+
+PHP:
+
+login.php
+
+<form method="post" action="verificar.php">
+    Ingrese su mail: <input type="email" name="mail" required>
+    <input type="submit" value="Entrar">
+</form>
+
+verificar.php
+
+<?php
+session_start();
+$link = mysqli_connect("localhost", "root", "", "base2");
+
+$mail = $_POST['mail'];
+$result = mysqli_query($link, "SELECT nombre FROM alumnos WHERE mail = '$mail'");
+
+if ($fila = mysqli_fetch_array($result)) {
+    $_SESSION['nombre'] = $fila['nombre'];
+    echo "Bienvenido, " . $fila['nombre'] . "<br>";
+    echo "<a href='prueba_sesion.php'>Entrar a la pagina</a>";
+} else {
+    echo "Correo no encontrado.";
+}
+
+mysqli_close($link);
+?>
+
+prueba_sesion.php
+
+<?php
+session_start();
+
+if (isset($_SESSION['nombre'])) {
+    echo "Hola " . $_SESSION['nombre'] . ", bienvenido.";
+} else {
+    echo "Acceso denegado.";
+}
+?>
