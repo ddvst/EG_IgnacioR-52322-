@@ -1,0 +1,17 @@
+<?php
+if (isset($_POST['nombre'])) {
+    $nombre = $_POST['nombre'];
+    setcookie('usuario', $nombre, time() + 3600 * 24 * 30);
+}
+$ultimoNombre = isset($_COOKIE['usuario']) ? $_COOKIE['usuario'] : '';
+?>
+<h2>Ingrese su nombre:</h2>
+<form method="post">
+    <input type="text" name="nombre" value="<?php echo $ultimoNombre; ?>" required>
+    <input type="submit" value="Guardar nombre">
+</form>
+<?php
+if (isset($nombre)) {
+    echo "Hola $nombre!";
+}
+?>
