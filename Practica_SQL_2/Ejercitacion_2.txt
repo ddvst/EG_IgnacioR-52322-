@@ -1,0 +1,10 @@
+<?php
+if (isset($_COOKIE['contador'])) {
+    $contador = $_COOKIE['contador'] + 1;
+    setcookie('contador', $contador, time() + 3600 * 24 * 30); <-- Las cookies durarán 30 dias desde que el usuario visita la pagina
+    echo "Visitaste esta pagina $contador veces.";
+} else {
+    setcookie('contador', 1, time() + 3600 * 24 * 30);
+    echo "Bienvenido.";
+}
+?>
