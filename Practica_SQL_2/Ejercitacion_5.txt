@@ -1,0 +1,28 @@
+login.php
+
+<form method="post" action="crear_sesion.php">
+    Nombre de usuario: <input type="text" name="usuario" required><br>
+    Contraseña: <input type="password" name="contraseña" required><br>
+    <input type="submit" value="Iniciar sesion">
+</form>
+
+crear_sesion.php
+
+<?php
+session_start();
+
+$_SESSION['usuario'] = $_POST['usuario'];
+$_SESSION['contraseña'] = $_POST['contraseña'];
+
+echo "Sesion creada correctamente.<br>";
+echo "<a href='mostrar_sesion.php'>Ver datos de sesion</a>";
+?>
+
+mostrar_sesion.php
+
+<?php
+session_start();
+
+echo "Usuario: " . $_SESSION['usuario'] . "<br>";
+echo "Contraseña: " . $_SESSION['contraseña'] . "<br>";
+?>
