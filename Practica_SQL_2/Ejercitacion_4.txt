@@ -1,0 +1,39 @@
+<?php
+$titular = isset($_COOKIE['titular']) ? $_COOKIE['titular'] : '';
+?>
+<h1>Periódico Online</h1>
+
+<form method="post">
+    <p>Seleccione a ver en el futuro:</p>
+    <input type="radio" name="titular" value="politica" <?php if($titular=='politica') echo 'checked'; ?>> Noticias Politicas<br>
+    <input type="radio" name="titular" value="economia" <?php if($titular=='economia') echo 'checked'; ?>> Noticias Economicas<br>
+    <input type="radio" name="titular" value="deporte" <?php if($titular=='deporte') echo 'checked'; ?>> Noticias Deportivas<br>
+    <input type="submit" value="Guardar preferencia">
+</form>
+<hr>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    setcookie('titular', $_POST['titular'], time() + 3600 * 24 * 30);
+    $titular = $_POST['titular'];
+    echo "<p>Preferencia guardada.</p>";
+}
+
+if ($titular == '') {
+    echo "<h3>Noticias Politicas: Elecciones 2025</h3>";
+    echo "<h3>Noticias Economicas: La bolsa y acciones</h3>";
+    echo "<h3>Noticias Deportivas: Proximas fechas de la LPF e internacionales</h3>";
+} else {
+    if ($titular == 'politica') echo "<h3>Noticias Politicas: Elecciones 2025</h3>";
+    if ($titular == 'economia') echo "<h3>Noticias Economicas: La bolsa y acciones</h3>";
+    if ($titular == 'deporte') echo "<h3>Noticias Deportivas: Proximas fechas de la LPF e internacionales</h3>";
+}
+?>
+
+<p><a href="borrar_cookie.php">Borrar Preferencias</a></p>
+
+borrar_cookie.php:
+
+<?php
+setcookie('titular', '', time() - 3600);
+header("Location: index.php");
+?>
